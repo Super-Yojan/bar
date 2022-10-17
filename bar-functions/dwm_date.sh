@@ -26,7 +26,7 @@ case "$clock" in
 	"12") icon="🕛" ;;
 esac
 
-date "+%Y %b %d (%a) $icon %I:%M%p"
+date "+%Y %b %d (%a) $icon %I:%M%p$SEP1"
 }
 
 dwm_date

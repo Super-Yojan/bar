@@ -10,8 +10,8 @@ then
   vpn_interface="tun0"
   vpn_ip=$(ip addr show "$vpn_interface" | grep -w "inet" | awk '{ print $2; }' | sed 's/\/.*$//')
 
-  echo "$SEP1 $local_ip | $vpn_ip $SEP2"
+  echo " $local_ip | $vpn_ip $SEP1"
 else
-  echo "$SEP1 $local_ip $SEP2"
+  echo " $local_ip $SEP1"
 fi
 }

@@ -15,7 +15,7 @@ update() {
 rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
 tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 
-printf "$SEP1%4sB|%4sB$SEP2" $(numfmt --to=iec $rx $tx)
+printf "%4sB|%4sB$SEP1" $(numfmt --to=iec $rx $tx)
 }
 
 dwm_nettart

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/dash
 
 # A modular status bar for dwm
 # Joe Standring <git@joestandring.com>
@@ -13,13 +13,18 @@
 LOC=$(readlink -f "$0")
 DIR=$(dirname "$LOC")
 
+#
+# GREEN='\033[0;32m'
+# RED='\033[0;31m'
+# WHITE='\033[0;37m'
+# RESET='\033[0m'
+
 # Change the appearance of the module identifier. if this is set to "unicode", then symbols will be used as identifiers instead of text. E.g. [📪 0] instead of [MAIL 0].
 # Requires a font with adequate unicode character support
 export IDENTIFIER="unicode"
 
 # Change the charachter(s) used to seperate modules. If two are used, they will be placed at the start and end.
-export SEP1=" ["
-export SEP2="] "
+export SEP1=","
 
 # Import the modules
 #. "$DIR/bar-functions/dwm_alarm.sh"
@@ -66,7 +71,7 @@ do
     #upperbar="$upperbar$(dwm_alsa)"
     #upperbar="$upperbar$(dwm_backlight)"
     upperbar="$upperbar$(dwm_battery)"
-    upperbar="$upperbar$(dwm_nettart)"
+    # upperbar="$upperbar$(dwm_nettart)"
     #upperbar="$upperbar$(dwm_ccurse)"
     #upperbar="$upperbar$(dwm_cmus)"
     #upperbar="$upperbar$(dwm_connman)"
@@ -77,7 +82,7 @@ do
     #upperbar="$upperbar$(dwm_loadavg)"
     #upperbar="$upperbar$(dwm_mail)"
     #upperbar="$upperbar$(dwm_mpc)"
-    upperbar="$upperbar$(dwm_pulse)"
+    # upperbar="$upperbar$(dwm_pulse)"
     upperbar="$upperbar$(dwm_resources)"
     upperbar="$upperbar$(dwm_ip)"
     #upperbar="$upperbar$(dwm_spotify)"
